@@ -1,0 +1,150 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Prevent overflow on small screens */
+    border-radius: 8px;
+}
+
+table th,
+table td {
+    padding: 16px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #4CAF50;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+    border-bottom: none; /* Remove border under table headers */
+}
+
+table td {
+    color: #555;
+}
+
+/* Hover Effects */
+table tr:hover {
+    background-color: #f9f9f9;
+    transition: background-color 0.3s ease;
+}
+
+/* Image Styling */
+img {
+    border-radius: 5px;
+    width: 50px;
+    height: 50px;
+    object-fit: cover; /* Ensure images maintain aspect ratio */
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Add hover zoom effect */
+}
+
+img:hover {
+    transform: scale(1.2); /* Slight zoom effect */
+}
+
+/* Modal Styles */
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+}
+
+.modal-content {
+    position: relative;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.modal-image {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #000;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    table {
+        font-size: 14px;
+    }
+    
+    table th,
+    table td {
+        padding: 10px;
+    }
+    
+    img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .modal-image {
+        width: 90%; /* Adjust modal image width on small screens */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    h1 {
+        font-size: 1.5rem; /* Smaller header font for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    table {
+        font-size: 12px;
+    }
+
+    img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .modal-image {
+        width: 100%;
+        height: auto;
+    }
+
+    h1 {
+        font-size: 1.2rem;
+    }
+}
